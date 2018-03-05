@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Xiaoyu Ma.
 """
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ###############################################################################
 
 ###############################################################################
-# TODO: 2.
+# Done: 2.
 #   You should have RUN the  m4e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -27,3 +27,49 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 ###############################################################################
+
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+window.delay(10)
+
+joye = rg.SimpleTurtle('classic')
+oliver = rg.SimpleTurtle('turtle')
+
+joye.pen = rg.Pen('black', 5)
+oliver.pen = rg.Pen('red', 5)
+
+joye.speed = 20
+joye.pen_up()
+joye.forward(150)
+joye.left(90)
+joye.pen_down()
+
+oliver.speed = 15
+oliver.pen_up()
+oliver.forward(100)
+oliver.left(90)
+oliver.backward(50)
+oliver.pen_down()
+
+for i in range(3):
+    joye.draw_circle(50)
+    joye.pen_up()
+    joye.right(90)
+    joye.backward(100)
+    joye.left(90)
+    joye.pen_down()
+
+for k in range(2):
+    oliver.draw_circle(50)
+    oliver.pen_up()
+    oliver.left(90)
+    oliver.forward(100)
+    oliver.right(90)
+    oliver.pen_down()
+
+window.close_on_mouse_click()
+
+
+
+
